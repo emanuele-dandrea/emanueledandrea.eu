@@ -11,8 +11,8 @@
     />
     <title>Emanuele D'Andrea | About</title>
   </head>
-  <body>
-    <header class="header">
+  <body class="width">
+    <header class="header flex-wrapper padding-2rem">
       <p class="logo">Emanuele D'Andrea</p>
     
       <button class="menu-toggle">
@@ -25,16 +25,16 @@
       </button>
     
       <nav class="nav">
-        <ul>
+        <ul class="flex-wrapper gap-2rem">
           <li><a href="/">Home</a></li>
           <li><a href="/about" class="active">About</a></li>
         </ul>
       </nav>
     </header>
 
-    <main id="main-aboutpage">
-      <div class="profile-wrapper">
-        <img src="/assets/emanuele.webp" alt="Emanuele's Picture" draggable="false"/>
+    <main id="main-aboutpage" class="flex-wrapper-column padding-2rem">
+      <div class="profile-wrapper flex-wrapper gap-2rem">
+        <img src="/assets/avatar.png" alt="Profile picture" draggable="false"/>
         <div class="presentation">
           <h1>Hi, I'm Emanuele</h1>
           <p>
@@ -45,32 +45,32 @@
           </p>
         </div>
       </div>
-      <div class="social-links-wrapper">
+      <div class="links-wrapper">
         <a href="#">
-          <img src="/assets/icons/thestorygraph.svg" alt=
+          <img src="/assets/icons/thestorygraph.svg" alt="" title="Reach me on The StoryGraph" />
         </a>
         <a href="#">
-          <img src="/assets/icons/protonmail.svg" alt="" />
+          <img src="/assets/icons/protonmail.svg" alt="" title="Send me a mail" />
         </a>
         <a href="#">
-          <img src="/assets/icons/github.svg" alt="" />
+          <img src="/assets/icons/github.svg" alt="" title="Reach me on GitHub" />
         </a>
         <a href="#">
-          <img src="/assets/icons/myanimelist.svg" alt="" />
+          <img src="/assets/icons/myanimelist.svg" alt="" title="View MyAnimeList" />
         </a>
         <a href="#">
-          <img src="/assets/icons/exercism.svg" alt="" />
+          <img src="/assets/icons/exercism.svg" alt="" title="Reach me on Exercism" />
         </a>
       </div>
     </main>
 
-    <footer>
-      <a href="#" p class="page-top">Top</a>
+    <footer class="flex-wrapper gap-2rem">
+      <a href="#" p class="page-top flex-wrapper">Top</a>
       <p>
         © 2025 Emanuele D'Andrea. This website is licensed under the MIT
         License. You can view the full license and source code on
         <a
-          href="https://github.com/emanuele-dandrea/emanuele-dandrea.idk"
+          href="https://github.com/emanuele-dandrea/emanueledandrea.eu"
           target="_blank"
           >GitHub</a
         >.
