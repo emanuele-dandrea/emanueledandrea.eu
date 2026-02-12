@@ -19,6 +19,11 @@ body {
     font-family: sans-serif;
 }
 
+.width {
+    width: min(70ch, 100% - 2rem);
+    margin-inline: auto;
+}
+
 p,
 a {
     color: var(--txt-color);
@@ -41,99 +46,169 @@ a {
     gap: 2rem;
 }
 
-.padding-2rem {
-    padding: 1rem;
+.padding-1rem {
+    padding: var(--padding);
 }
 
-.header {
-  justify-content: space-between;
-  position: relative;
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
     font-weight: bold;
+    cursor: default;
 }
 
-.nav,
-ul,
-a {
-  list-style: none;
-  text-decoration: none;
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.width {
-    width: min(70ch, 100% - 2rem);
-    margin-inline: auto;
+#menu-toggle {
+    display: none;
 }
 
-nav a:hover {
-    color: var(--hover-color);
-    text-decoration-color: var(--hover-color);
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
 }
 
-.menu-toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  display: none; 
-  align-items: center;
-  justify-content: center;
+.menu-icon svg rect,
+.menu-icon svg line {
+    fill: var(--txt-color);
+    stroke: var(--txt-color);
 }
 
-.icon {
-  width: 2em;
-  stroke: currentColor;
-  stroke-width: 2;
-  fill: none;
+.menu-icon {
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: background 0.2s ease;
+}
+
+#menu-toggle:checked ~ header .menu-icon {
+  background: rgba(0,0,0,0.1);
+}
+
+
+nav {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
 }
 
 .icon-close {
-  display: none;
+    display: none;
 }
 
-.header.menu-open .icon-open {
-  display: none;
-}
-
-.header.menu-open .icon-close {
-  display: block;
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav {
-    position: absolute;
-    top: 100%;
+#menu-toggle:checked ~ header {
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    background: var(--bg-color);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    z-index: 1;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .header.menu-open .nav {
-    max-height: 20em;
-    background-color: var(--bg-color);
-    border-bottom: 2px solid var(--border-color);
-  }
+    z-index: 1000;
+    height: 50%;
+    background-color: var(--fg-color);
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
-/* Homepage */
+#menu-toggle:checked ~ header nav {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#menu-toggle:checked ~ header nav ul {
+    margin-top: 1rem;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+header nav ul li {  
+    padding: var(--padding) 0 var(--padding) 0;
+    border-radius: var(--border-radius);
+    text-align: center;
+    width: 100%; 
+}
+
+li:active, li:active a{
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+}
+
+#menu-toggle:checked ~ header .icon-open {
+    display: none;
+}
+
+#menu-toggle:checked ~ header .icon-close {
+    display: block;
+    
+}
+
+.nav-buffer {
+  height: 0;
+}
+
+#menu-toggle:checked ~ .nav-buffer {
+  height: 50vh;
+}
+
+@media (min-width: 600px) {
+    #menu-toggle:checked ~ header {
+        position: static;
+        background: transparent;
+        height: auto;
+        box-shadow: none;
+    }
+    #menu-toggle:checked ~ header nav {
+        width: auto;
+        height: auto;
+    }
+    #menu-toggle:checked ~ header nav ul {
+        align-items: center;
+        width: auto;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #menu-toggle:checked ~ .nav-buffer {
+      height: 0;
+    }
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-top {
+        width: auto;
+    }
+    nav {
+        display: block;
+    }
+    .menu-icon {
+        display: none;
+    }
+    li:active{
+        background-color: transparent;
+    }
+    header nav ul {
+        gap: 1rem;
+    }
+    header nav ul a {
+        color: var(--txt-color);
+    }
+}
+
+/* BLOG */
 
 .main-homepage article {
     padding: var(--padding);
@@ -150,7 +225,8 @@ nav a:hover {
     border-color: var(--border-color);
 }
 
-/* Footer */
+/* FOOTER */
+
 footer {
     padding: 1em;
     border-radius: 0.8em 0.8em 0 0;
@@ -186,7 +262,8 @@ a:hover.page-top {
     color: var(--hover-color);
 }
 
-/* Utility */
+/* UTILITY */
+
 .no-select {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -204,34 +281,16 @@ a:hover.page-top {
     box-shadow: 0 4px 0 lightgrey;
 }
 
+li:active a.active{
+    background-color: gray;
+    color: var(--bg-color);
+}
+
 a:hover.active {
     color: var(--bg-color);
     text-decoration: none;
 }
 
-/* Figure */
-figure {
-    padding: 0 1em;
-    color: var(--txt-color);
-}
-
-figure button {
-    background-color: transparent;
-    font-size: 1.5em;
-    color: var(--txt-color);
-    border: none;
-    cursor: pointer;
-}
-
-/* Blockquote */
-blockquote::before {
-    content: open-quote;
-}
-blockquote::after {
-    content: close-quote;
-}
-
-/* About */
 .profile-wrapper {
     justify-content: center;
 }
@@ -248,7 +307,7 @@ blockquote::after {
 #main-aboutpage {
     width: 100%;
     max-width: 50em;
-    gap: 4em; 
+    gap: 4em;
 }
 
 .links-wrapper {
@@ -263,26 +322,26 @@ blockquote::after {
 }
 
 .links-wrapper a:hover > img {
-    filter: brightness(0) saturate(100%) invert(36%) sepia(7%) saturate(444%) hue-rotate(214deg) brightness(94%) contrast(86%);
+    filter: brightness(0) saturate(100%) invert(36%) sepia(7%) saturate(444%)
+        hue-rotate(214deg) brightness(94%) contrast(86%);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     .profile-wrapper {
         flex-direction: column;
         text-align: center;
     }
-    
+
     footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
+
     .links-wrapper {
         gap: 1.5rem;
     }
-    
+
     .page-top {
         font-size: 2em;
     }
