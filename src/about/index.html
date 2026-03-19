@@ -1,110 +1,90 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/main.css?v=1" />
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <title>Emanuele D'Andrea | About</title>
-  </head>
-  <body class="width">
-    <input type="checkbox" id="menu-toggle" />
 
-    <header class="flex-wrapper padding-1rem">
-      <div class="header-top">
-        <p class="logo">Emanuele D'Andrea</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/main.css?v=1" />
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 
-        <label for="menu-toggle" class="menu-icon">
-          <svg class="icon-open" viewBox="0 0 100 80" width="30" height="30">
-            <rect width="100" height="10"></rect>
-            <rect y="30" width="100" height="10"></rect>
-            <rect y="60" width="100" height="10"></rect>
-          </svg>
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
-          <svg class="icon-close" viewBox="0 0 100 100" width="30" height="30">
-            <line x1="10" y1="10" x2="90" y2="90" stroke-width="10" />
-            <line x1="90" y1="10" x2="10" y2="90" stroke-width="10" />
-          </svg>
-        </label>
+  <title>Emanuele D'Andrea | About</title>
+</head>
+
+<body class="width">
+  <input type="checkbox" id="menu-toggle" />
+
+  <header class="flex-wrapper padding-1rem">
+    <div class="header-top">
+      <p class="logo">Emanuele D'Andrea</p>
+
+      <label for="menu-toggle" class="menu-icon">
+        <svg class="icon-open" viewBox="0 0 100 80" width="30" height="30">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+
+        <svg class="icon-close" viewBox="0 0 100 100" width="30" height="30">
+          <line x1="10" y1="10" x2="90" y2="90" stroke-width="10" />
+          <line x1="90" y1="10" x2="10" y2="90" stroke-width="10" />
+        </svg>
+      </label>
+    </div>
+
+    <nav>
+      <ul class="flex-wrapper">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about" class="active">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="nav-buffer"></div>
+
+  <main id="main-aboutpage" class="flex-wrapper-column padding-1rem">
+    <div class="profile-wrapper flex-wrapper gap-2rem">
+      <img src="/assets/avatar.png" alt="Profile picture" draggable="false" />
+      <div class="presentation">
+        <h1>Hi, I'm Emanuele</h1>
+        <p>
+          Honestly I don't know what to write, so i will say few useless things. I'm from Italy,
+          I'm a student and I like reading books. I always want to learn new things. That's it, maybe.
+        </p>
       </div>
+    </div>
+    <div class="links-wrapper">
+      <a href="https://app.thestorygraph.com/profile/emanuele_">
+        <img src="/assets/icons/thestorygraph.svg" alt="" title="Reach me on The StoryGraph" />
+      </a>
+      <a href="mailto:emanueledandrea@proton.me">
+        <img src="/assets/icons/protonmail.svg" alt="" title="Send me a mail" />
+      </a>
+      <a href="https://github.com/emanuele-dandrea">
+        <img src="/assets/icons/github.svg" alt="" title="Reach me on GitHub" />
+      </a>
+      <a href="#">
+        <img src="/assets/icons/myanimelist.svg" alt="" title="View MyAnimeList" />
+      </a>
+      <a href="https://exercism.org/profiles/emanuele-dandrea">
+        <img src="/assets/icons/exercism.svg" alt="" title="Reach me on Exercism" />
+      </a>
+    </div>
+  </main>
 
-      <nav>
-        <ul class="flex-wrapper">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about" class="active">About</a></li>
-        </ul>
-      </nav>
-    </header>
+  <footer class="flex-wrapper gap-2rem">
+    <a href="#" p class="page-top flex-wrapper">Top</a>
+    <p>
+      &COPY; 2025 Emanuele D'Andrea. This website is licensed under the MIT
+      License. You can view the full license and source code on
+      <a href="https://github.com/emanuele-dandrea/emanueledandrea.eu" target="_blank">GitHub</a>.
+    </p>
+  </footer>
+</body>
 
-    <div class="nav-buffer"></div>
-
-    <main id="main-aboutpage" class="flex-wrapper-column padding-1rem">
-      <div class="profile-wrapper flex-wrapper gap-2rem">
-        <img src="/assets/avatar.png" alt="Profile picture" draggable="false" />
-        <div class="presentation">
-          <h1>Hi, I'm Emanuele</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            incidunt minus laudantium, ipsa asperiores debitis aut consequuntur
-            atque. Magnam fugit aperiam dolor quasi et suscipit consectetur
-            neque odio mollitia dolorum?
-          </p>
-        </div>
-      </div>
-      <div class="links-wrapper">
-        <a href="#">
-          <img
-            src="/assets/icons/thestorygraph.svg"
-            alt=""
-            title="Reach me on The StoryGraph"
-          />
-        </a>
-        <a href="#">
-          <img
-            src="/assets/icons/protonmail.svg"
-            alt=""
-            title="Send me a mail"
-          />
-        </a>
-        <a href="#">
-          <img
-            src="/assets/icons/github.svg"
-            alt=""
-            title="Reach me on GitHub"
-          />
-        </a>
-        <a href="#">
-          <img
-            src="/assets/icons/myanimelist.svg"
-            alt=""
-            title="View MyAnimeList"
-          />
-        </a>
-        <a href="#">
-          <img
-            src="/assets/icons/exercism.svg"
-            alt=""
-            title="Reach me on Exercism"
-          />
-        </a>
-      </div>
-    </main>
-
-    <footer class="flex-wrapper gap-2rem">
-      <a href="#" p class="page-top flex-wrapper">Top</a>
-      <p>
-        &COPY; 2025 Emanuele D'Andrea. This website is licensed under the MIT
-        License. You can view the full license and source code on
-        <a
-          href="https://github.com/emanuele-dandrea/emanueledandrea.eu"
-          target="_blank"
-          >GitHub</a
-        >.
-      </p>
-    </footer>
-  </body>
 </html>
