@@ -1,0 +1,16 @@
+/* BLOG */
+
+.main-homepage article {
+  padding: var(--padding);
+  margin: 1rem 0;
+}
+
+.main-homepage a>article {
+  border: 2px solid var(--bg-color);
+  border-radius: var(--border-radius);
+  transition: border-color 0.3s ease-in-out 50ms;
+}
+
+.main-homepage a:hover>article {
+  border-color: var(--border-color);
+}

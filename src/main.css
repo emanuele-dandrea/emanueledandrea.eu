@@ -1,0 +1,89 @@
+@import url(/styles/footer.css);
+@import url(/styles/header.css);
+@import url(/styles/reset.css);
+@import url(/styles/blog.css);
+@import url(/styles/about.css);
+html {
+  --border-radius: 1em;
+  --padding: 1em;
+  --p-font-size: 1.2em;
+  --h-font-size: 1.5em;
+  --bg-color: #f9f8f6;
+  --fg-color: #f5f5f0;
+  --border-color: #e0d9d9;
+  --txt-color: #57595b;
+  --hover-color: gray;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--bg-color);
+}
+
+.width {
+  width: min(70ch, 100% - 2rem);
+  margin-inline: auto;
+}
+
+p,
+a {
+  color: var(--txt-color);
+  text-decoration: none;
+  font-size: var(--p-font-size);
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.flex-wrapper-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gap-2rem {
+  gap: 2rem;
+}
+
+.padding-1rem {
+  padding: var(--padding);
+}
+
+/* UTILITY */
+
+.no-select {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.active {
+  background-color: var(--hover-color);
+  color: var(--bg-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 0 lightgrey;
+}
+
+li:active a.active {
+  background-color: gray;
+  color: var(--bg-color);
+}
+
+a:hover.active {
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.profile-wrapper {
+  justify-content: center;
+}

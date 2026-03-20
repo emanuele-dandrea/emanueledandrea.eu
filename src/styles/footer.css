@@ -1,0 +1,34 @@
+/* FOOTER */
+
+footer {
+  padding: var(--padding);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  background-color: var(--fg-color);
+}
+
+footer a {
+  transition: color 0.3s ease-in-out;
+}
+
+footer p a {
+  text-decoration: underline;
+  text-decoration-color: var(--txt-color);
+  text-underline-offset: 0.3em;
+  font-size: var(--p-font-size);
+}
+
+footer p a:hover {
+  text-decoration-color: var(--hover-color);
+}
+
+.page-top::after {
+  content: "\F139";
+  font-family: bootstrap-icons;
+  font-size: 0.8em;
+  display: block;
+  margin-left: 0.8rem;
+}
+
+a:hover.page-top {
+  color: var(--hover-color);
+}
