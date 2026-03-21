@@ -3,17 +3,19 @@
 @import url(/styles/reset.css);
 @import url(/styles/blog.css);
 @import url(/styles/about.css);
+
 html {
   --border-radius: 1em;
   --padding: 1em;
   --p-font-size: 1.2em;
   --h-font-size: 1.5em;
-  --bg-color: #f9f8f6;
-  --fg-color: #f5f5f0;
-  --border-color: #e0d9d9;
-  --txt-color: #57595b;
-  --hover-color: gray;
+  --bg-color: light-dark(hsl(30deg 30% 95%), hsl(60deg 70% 5%));
+  --fg-color: light-dark(hsl(40deg 55% 85%), hsl(50deg 8% 19%));
+  --border-color: light-dark(hsl(40deg 55% 85%), hsl(50deg 8% 19%));
+  --txt-color: light-dark(hsl(15deg 16% 50%), hsl(30deg 30% 95%));
+  --hover-color: light-dark(hsl(15deg 42% 65%), hsl(15deg 16% 80%));
   font-family: sans-serif;
+  color-scheme: dark light;
 }
 
 body {
@@ -34,6 +36,10 @@ a {
   color: var(--txt-color);
   text-decoration: none;
   font-size: var(--p-font-size);
+}
+
+a:hover {
+  color: var(--hover-color)
 }
 
 .flex-wrapper {
@@ -67,23 +73,20 @@ a {
 }
 
 .active {
-  background-color: var(--hover-color);
+  /* class */
+  background-color: var(--txt-color);
   color: var(--bg-color);
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 0.9rem;
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 0 lightgrey;
+  box-shadow: 0 4px 0 lightgray;
 }
 
 li:active a.active {
-  background-color: gray;
+  background-color: var(--txt-color);
   color: var(--bg-color);
 }
 
 a:hover.active {
   color: var(--bg-color);
   text-decoration: none;
-}
-
-.profile-wrapper {
-  justify-content: center;
 }

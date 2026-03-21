@@ -13,4 +13,5 @@
 
 .main-homepage a:hover>article {
   border-color: var(--border-color);
+  color: var(--txt-color);
 }
