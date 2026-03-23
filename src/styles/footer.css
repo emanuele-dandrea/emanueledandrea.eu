@@ -6,10 +6,6 @@ footer {
   background-color: var(--fg-color);
 }
 
-footer a {
-  transition: color 0.3s ease-in-out;
-}
-
 footer p a {
   text-decoration: underline;
   text-decoration-color: var(--txt-color);
@@ -18,7 +14,7 @@ footer p a {
 }
 
 footer p a:hover {
-  text-decoration-color: var(--hover-color);
+  text-decoration-color: var(--fg-color);
 }
 
 .page-top::after {

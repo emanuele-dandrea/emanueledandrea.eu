@@ -2,20 +2,21 @@
 @import url(/styles/header.css);
 @import url(/styles/reset.css);
 @import url(/styles/blog.css);
-@import url(/styles/about.css);
 
 html {
   --border-radius: 1em;
   --padding: 1em;
-  --p-font-size: 1.2em;
-  --h-font-size: 1.5em;
-  --bg-color: light-dark(hsl(30deg 30% 95%), hsl(60deg 70% 5%));
-  --fg-color: light-dark(hsl(40deg 55% 85%), hsl(50deg 8% 19%));
-  --border-color: light-dark(hsl(40deg 55% 85%), hsl(50deg 8% 19%));
+  --p-font-size: 1.2rem;
+  --h-font-size: 1.5rem;
+  --bg-color: light-dark(hsl(30deg 25% 95%), hsl(60deg 70% 5%));
+  --fg-color: light-dark(hsl(140deg 30% 90%), hsl(50deg 8% 19%));
+  --border-color: light-dark(hsl(140deg 30% 90%), hsl(50deg 8% 19%));
   --txt-color: light-dark(hsl(15deg 16% 50%), hsl(30deg 30% 95%));
-  --hover-color: light-dark(hsl(15deg 42% 65%), hsl(15deg 16% 80%));
+  --hover-color: light-dark(hsl(15deg 10% 70%), hsl(15deg 16% 80%));
   font-family: sans-serif;
   color-scheme: dark light;
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
 }
 
 body {
@@ -31,11 +32,20 @@ body {
   margin-inline: auto;
 }
 
+time {
+  color: var(--txt-color);
+}
+
+.logo,
 p,
 a {
   color: var(--txt-color);
   text-decoration: none;
   font-size: var(--p-font-size);
+}
+
+a {
+  transition: text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 a:hover {
@@ -89,4 +99,27 @@ li:active a.active {
 a:hover.active {
   color: var(--bg-color);
   text-decoration: none;
+}
+
+figure {
+  margin: 2em 0 2em 0;
+  width: 90%;
+}
+
+figure>img {
+  border-radius: var(--border-radius);
+}
+
+figcaption {
+  font-size: 13px;
+  color: var(--txt-color);
+}
+
+figcaption>a {
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration-color: var(--bg-color);
 }

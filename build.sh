@@ -8,6 +8,7 @@ deploy() {
   cd ./target/styles
   cat header.css blog.css reset.css footer.css ../main.css > ../output
   mv about.css ../
+  mv post.css ../
   cd ../
   rm ./main.css && rm -r ./styles
   mv ./output ./main.css

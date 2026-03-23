@@ -15,3 +15,30 @@
   border-color: var(--border-color);
   color: var(--txt-color);
 }
+
+main div figure img {
+  width: 10em;
+  filter: brightness(0) saturate(100%) invert(45%) sepia(13%) saturate(741%) hue-rotate(328deg) brightness(103%) contrast(84%);
+}
+
+main div figure {
+  padding-left: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+  main div figure img {
+    filter: invert(1);
+  }
+}
+
+.main-homepage article > p {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.main-homepage h1 {
+  line-height: 1.2;
+}

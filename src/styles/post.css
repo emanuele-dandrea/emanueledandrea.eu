@@ -1,0 +1,29 @@
+/* POST */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--txt-color);
+  margin: 0.5em 0 0.5em 0;
+}
+
+p {
+  font-size: var(--p-font-size);
+}
+
+article a, figcaption > a {
+  text-decoration: underline;
+}
+
+a:hover{
+  text-decoration-color: var(--bg-color);
+}
+
+main {
+  margin: 0em 0 2em 0;
+  padding: var(--padding);
+}
+
+main article ul {
+  margin: 1em 0em 1em 2em;
+  color: var(--txt-color);
+  font-size: var(--p-font-size);
+}
