@@ -6,7 +6,7 @@
 }
 
 .main-homepage a>article {
-  border: 2px solid var(--bg-color);
+  border: 2px solid transparent;
   border-radius: var(--border-radius);
   transition: border-color 0.3s ease-in-out 50ms;
 }

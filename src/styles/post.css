@@ -18,12 +18,12 @@ a:hover{
 }
 
 main {
-  margin: 0em 0 2em 0;
+  margin: 0 0 2em 0;
   padding: var(--padding);
 }
 
 main article ul {
-  margin: 1em 0em 1em 2em;
+  margin: 0 0 0 2em;
   color: var(--txt-color);
   font-size: var(--p-font-size);
 }

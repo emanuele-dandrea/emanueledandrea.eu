@@ -48,8 +48,8 @@ a {
   transition: text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-a:hover {
-  color: var(--hover-color)
+a:hover:not(a:has(> article)) {
+  color: var(--hover-color);
 }
 
 .flex-wrapper {
@@ -64,7 +64,7 @@ a:hover {
 }
 
 .gap-2rem {
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .padding-1rem {
