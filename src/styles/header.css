@@ -11,7 +11,7 @@ header {
 .logo {
   font-weight: bold;
   cursor: default;
-}
+} 
 
 .header-top {
   width: 100%;
@@ -36,7 +36,6 @@ header {
 }
 
 .menu-icon {
-  padding: 0.5rem;
   border-radius: var(--border-radius);
   transition: background 0.2s ease;
 }

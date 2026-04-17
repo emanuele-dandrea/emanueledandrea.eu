@@ -6,13 +6,13 @@
 }
 
 .main-homepage a>article {
-  border: 2px solid transparent;
   border-radius: var(--border-radius);
-  transition: border-color 0.3s ease-in-out 50ms;
+  outline: 0.2em solid transparent;
+  transition: outline-color ease-in-out 0.3s 50ms;
 }
 
 .main-homepage a:hover>article {
-  border-color: var(--border-color);
+  outline: 0.2em solid var(--border-color);
   color: var(--txt-color);
 }
 
@@ -39,6 +39,7 @@ main div figure {
   overflow: hidden;
 }
 
-.main-homepage h1 {
+.main-homepage h2 {
   line-height: 1.2;
+  font-size: 1.5em;
 }

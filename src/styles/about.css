@@ -4,7 +4,6 @@
   width: 175px;
 }
 
-.profile-wrapper h1,
 .profile-wrapper p {
   color: var(--txt-color);
 }
@@ -49,4 +48,8 @@
 
 .profile-wrapper {
   justify-content: center;
+}
+
+.profile-wrapper h2 {
+  font-size: 2em;
 }
