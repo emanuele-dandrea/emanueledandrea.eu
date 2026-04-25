@@ -3,6 +3,7 @@
 h1, h2, h3, h4, h5, h6 {
   color: var(--txt-color);
   margin: 0.5em 0 0.5em 0;
+  cursor: default;
 }
 
 p {
@@ -44,4 +45,38 @@ sup, sup a {
   font-size: 0.85em;
   text-decoration: none;
   font-weight: bold;
+  margin-left: 0.1em;
+  display: inline-block;
+  font-style: normal;
+}
+
+section#references sup{
+  margin-left: 0;
+  margin-right: 0.3em;
+  display: inline-block;
+  color: var(--txt-color);
+}
+
+section#references a {
+  text-decoration: none;
+}
+
+section#references a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: 0.1em solid var(--fg-color);
+  border-radius: 5px;
+  display: block;
+  margin-top: 1em;
+}
+
+.ref:target {
+  animation: highlightFade 2s ease forwards;
+}
+
+@keyframes highlightFade {
+  0%   { background-color: lightgrey; }
+  100% { background-color: transparent; }
 }
