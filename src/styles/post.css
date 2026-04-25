@@ -28,3 +28,20 @@ main article ul {
   font-size: var(--p-font-size);
 }
 
+p#opening::first-letter {
+    float: left;
+    font-size: 3.5em;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-right: 9px;
+    color: lightgray;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: gray .05em .05em;
+  }
+
+sup, sup a {
+  line-height: 1;
+  font-size: 0.85em;
+  text-decoration: none;
+  font-weight: bold;
+}
