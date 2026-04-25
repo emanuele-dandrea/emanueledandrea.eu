@@ -130,3 +130,11 @@ blockquote {
 a:hover {
   text-decoration-color: var(--bg-color);
 }
+
+.external-link::after {
+  content: "\F1C5";
+  font-size: 0.7em;
+  margin-left: 0.3em;
+  font-family: "bootstrap-icons";
+  display: inline-block;
+}
