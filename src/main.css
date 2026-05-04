@@ -4,31 +4,31 @@
 @import url(/styles/blog.css);
 
 html {
-  --border-radius: 0.7rem;
-  --padding: 1em;
-  --p-font-size: 1.2rem;
-  --h-font-size: 1.5rem;
+  color-scheme: dark light;
   --bg-color: light-dark(hsl(30deg 25% 95%), hsl(60deg 70% 5%));
   --fg-color: light-dark(hsl(140deg 30% 90%), hsl(50deg 8% 19%));
   --border-color: light-dark(hsl(140deg 30% 90%), hsl(50deg 8% 19%));
   --txt-color: light-dark(hsl(15deg 16% 50%), hsl(30deg 30% 95%));
   --hover-color: light-dark(hsl(15deg 10% 70%), hsl(15deg 16% 80%));
+
+  --border-radius: 1em;
+  --padding: 1em;
+
   font-family: sans-serif;
-  color-scheme: dark light;
-  scrollbar-gutter: stable;
-  overflow-y: scroll;
+  font-size: clamp(1em, .7em + .4vw, 2em);
+  /* scrollbar-gutter: stable; */
+  /* overflow-y: scroll; */
 }
 
 body {
   min-height: 100vh;
   display: grid;
-  justify-content: center;
   grid-template-rows: auto 1fr auto;
   background-color: var(--bg-color);
 }
 
 .width {
-  width: min(70ch, 100% - 2rem);
+  width: min(43rem, 100% - 1rem);
   margin-inline: auto;
 }
 
@@ -63,15 +63,13 @@ a:hover:not(a:has(> article)) {
   justify-content: center;
 }
 
-.gap-2rem {
+.gap {
   gap: 1rem;
 }
 
-.padding-1rem {
+.padding {
   padding: var(--padding);
 }
-
-/* UTILITY */
 
 .no-select {
   -webkit-user-select: none;
@@ -83,12 +81,9 @@ a:hover:not(a:has(> article)) {
 }
 
 .active {
-  /* class */
   background-color: var(--txt-color);
   color: var(--bg-color);
-  padding: 0.5rem 0.9rem;
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 0 lightgray;
 }
 
 li:active a.active {
@@ -102,7 +97,7 @@ a:hover.active {
 }
 
 figure {
-  margin: 2em 0 2em 0;
+  margin: 2rem 0 2rem 0;
   width: 90%;
 }
 
@@ -111,19 +106,19 @@ figure>img {
 }
 
 figcaption {
-  font-size: 13px;
+  font-size: .7rem;
   color: var(--txt-color);
 }
 
 figcaption>a {
-  font-size: 13px;
+  font-size: .7rem;
   text-decoration: underline;
 }
 
 blockquote {
   font-size: var(--p-font-size);
   color: var(--txt-color);
-  margin: 1.5em;
+  margin: 1.5rem;
   font-style: italic;
 }
 
@@ -133,8 +128,12 @@ a:hover {
 
 .external-link::after {
   content: "\F1C5";
-  font-size: 0.7em;
-  margin-left: 0.3em;
+  font-size: .7em;
+  margin-left: .3em;
   font-family: "bootstrap-icons";
   display: inline-block;
+}
+
+abbr {
+  cursor: help;
 }

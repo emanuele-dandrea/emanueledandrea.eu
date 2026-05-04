@@ -2,12 +2,8 @@
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--txt-color);
-  margin: 0.5em 0 0.5em 0;
+  margin: 0.5rem 0 0.5rem 0;
   cursor: default;
-}
-
-p {
-  font-size: var(--p-font-size);
 }
 
 article a, figcaption > a {
@@ -19,25 +15,25 @@ a:hover{
 }
 
 main {
-  margin: 0 0 2em 0;
+  margin: 0 0 2rem 0;
   padding: var(--padding);
 }
 
 main article ul {
-  margin: 0 0 0 2em;
+  margin: 0 0 0 2rem;
   color: var(--txt-color);
   font-size: var(--p-font-size);
 }
 
 p#opening::first-letter {
     float: left;
-    font-size: 3.5em;
+    font-size: 3.5rem;
     line-height: 1.5;
     font-weight: bold;
-    margin-right: 9px;
+    margin-right: 0.5rem;
     color: lightgray;
     font-family: "Times New Roman", Times, serif;
-    text-shadow: gray .05em .05em;
+    text-shadow: gray .2rem .2rem;
   }
 
 sup, sup a {
@@ -66,10 +62,10 @@ section#references a:hover {
 }
 
 hr {
-  border: 0.1em solid var(--fg-color);
+  border: 0.1rem solid var(--fg-color);
   border-radius: 5px;
   display: block;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .ref:target {
