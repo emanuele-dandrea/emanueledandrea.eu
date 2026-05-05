@@ -11,11 +11,11 @@ html {
   --txt-color: light-dark(hsl(15deg 16% 50%), hsl(30deg 30% 95%));
   --hover-color: light-dark(hsl(15deg 10% 70%), hsl(15deg 16% 80%));
 
-  --border-radius: 1em;
+  --border-radius: .7em;
   --padding: 1em;
 
   font-family: sans-serif;
-  font-size: clamp(1em, .7em + .4vw, 2em);
+  font-size: clamp(1.1em, .7em + .4vw, 2em);
   /* scrollbar-gutter: stable; */
   /* overflow-y: scroll; */
 }
@@ -41,11 +41,11 @@ p,
 a {
   color: var(--txt-color);
   text-decoration: none;
-  font-size: var(--p-font-size);
+  font-size: 1rem;
 }
 
 a {
-  transition: text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: text-decoration-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 a:hover:not(a:has(> article)) {
@@ -116,10 +116,12 @@ figcaption>a {
 }
 
 blockquote {
-  font-size: var(--p-font-size);
   color: var(--txt-color);
   margin: 1.5rem;
   font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  border-left: .2rem solid var(--txt-color);
+  padding-left: .5rem;
 }
 
 a:hover {
@@ -136,4 +138,15 @@ a:hover {
 
 abbr {
   cursor: help;
+}
+
+:focus-visible {
+  outline: none;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  box-shadow: 0 0 0 .2em rgb(128 128 128 / 0.2);
+}
+
+.article-wrapper a:not(figure a) {
+  display: block;
 }

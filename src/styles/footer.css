@@ -9,7 +9,7 @@ footer {
 footer p a {
   text-decoration: underline;
   text-decoration-color: var(--txt-color);
-  text-underline-offset: 0.3em;
+  text-underline-offset: .3rem;
 }
 
 footer p a:hover {
@@ -19,9 +19,9 @@ footer p a:hover {
 .page-top::after {
   content: "\F139";
   font-family: bootstrap-icons;
-  font-size: 0.8em;
+  font-size: .8em;
   display: block;
-  margin-left: 0.8rem;
+  margin-left: .8em;
 }
 
 a:hover.page-top {
@@ -34,9 +34,15 @@ a:hover.page-top {
     align-items: center;
     text-align: center;
   }
+  .page-top {
+    font-size: 1.2rem;
+  }
+  /* .page-top:active { */
+    /* background-color: lightcyan; */
+  /* } */
 }
 
 footer p, footer p a {
-  font-size: 0.8rem;
+  font-size: .8rem;
 }
 

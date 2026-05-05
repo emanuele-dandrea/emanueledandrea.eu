@@ -2,7 +2,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--txt-color);
-  margin: 0.5rem 0 0.5rem 0;
+  margin: .5rem 0 .5rem 0;
   cursor: default;
 }
 
@@ -22,7 +22,6 @@ main {
 main article ul {
   margin: 0 0 0 2rem;
   color: var(--txt-color);
-  font-size: var(--p-font-size);
 }
 
 p#opening::first-letter {
@@ -37,13 +36,12 @@ p#opening::first-letter {
   }
 
 sup, sup a {
-  line-height: 1;
-  font-size: 0.85em;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 0.1em;
+  line-height: .5;
+  font-size: .9em;
+  margin-left: .1em;
   display: inline-block;
   font-style: normal;
+  font-family: sans-serif;
 }
 
 section#references sup{

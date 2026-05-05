@@ -25,7 +25,7 @@ header {
 }
 
 .menu-icon {
-  padding: 0.5em;
+  padding: .5em;
   cursor: pointer;
   display: inline-block;
 }
@@ -38,11 +38,11 @@ header {
 
 .menu-icon {
   border-radius: var(--border-radius);
-  transition: background 0.2s ease;
+  transition: background 200ms ease;
 }
 
 #menu-toggle:checked~header .menu-icon {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, .1);
 }
 
 nav {
@@ -65,12 +65,12 @@ nav ul {
   height: 50%;
   background-color: var(--fg-color);
   /* opacity: 0.9; */
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, .1);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 #menu-toggle:checked~header .header-top {
-  padding: 0 0.5rem 0 0.5rem;
+  padding: 0 .5rem 0 .5rem;
 }
 
 
@@ -118,7 +118,7 @@ li:active a {
 }
 
 header ul a { 
-  padding: 0.5rem 0.9rem;
+  padding: .5rem .9rem;
 }
 
 @media (min-width: 600px) {

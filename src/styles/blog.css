@@ -7,12 +7,13 @@
 
 .main-homepage a>article {
   border-radius: var(--border-radius);
-  outline: 0.2em solid transparent;
-  transition: outline-color ease-in-out 0.3s 50ms;
+  /* outline: 0.2em solid transparent; */
+  transition: box-shadow ease-in-out 300ms 100ms;
 }
 
 .main-homepage a:hover>article {
-  outline: 0.2em solid var(--border-color);
+  box-shadow: 0 0 0 .2em rgb(128 128 128 / .2);
+  /* outline: 0.2em solid var(--border-color); */
   color: var(--txt-color);
 }
 
@@ -41,9 +42,9 @@ main div figure {
 
 .main-homepage h2 {
   line-height: 1.2;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 main article time {
-  font-size: 1rem;
+  font-size: .8em;
 }
