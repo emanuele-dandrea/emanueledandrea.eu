@@ -1,0 +1,8 @@
+origin = "https://emanueledandrea.eu"
+sources = "src"
+build_dir = "public"
+deploy_cmd = ["rsync", "-avhL", "--partial", "--delete", "--info=progress2", "{DIR}/", "server:/var/www/emanueledandrea.eu"]
+
+[serve]
+debounce = 100
+
